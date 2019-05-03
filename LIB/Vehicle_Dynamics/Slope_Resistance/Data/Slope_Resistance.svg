@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generiert durch Microsoft Visio, SVG Export slope.svg acceleration -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events"
+		xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" width="8.5in" height="6.5in" viewBox="0 0 612 468"
+		xml:space="preserve" color-interpolation-filters="sRGB" class="st3">
+	<v:documentProperties v:langID="1031"/>
+
+	<style type="text/css">
+	<![CDATA[
+		.st1 {fill:#000000;stroke:none;stroke-linecap:butt;stroke-width:0.830393}
+		.st2 {fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:16}
+		.st3 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<g v:mID="0" v:index="1" v:groupContext="foregroundPage">
+		<title>acceleration</title>
+		<v:pageProperties v:drawingScale="1" v:pageScale="1" v:drawingUnits="19" v:shadowOffsetX="9" v:shadowOffsetY="-9"/>
+		<g id="group1-1" transform="translate(-126.827,-9.87094) rotate(-23.7)" v:mID="1" v:groupContext="group">
+			<title>Tabelle.1</title>
+			<g id="group2-2" v:mID="2" v:groupContext="group">
+				<title>Tabelle.2</title>
+				<g id="shape3-3" v:mID="3" v:groupContext="shape" transform="translate(0,-37.8235)">
+					<title>Tabelle.3</title>
+					<path d="M21.59 343.46 C84.7 225.38 344.61 212.46 448.41 309.33 C509.03 317.63 680.92 372.06 601.2 467.08 L551.38
+								 467.08 C555.53 457.85 558.02 446.78 558.02 435.71 C558.02 394.2 525.64 360.99 484.95 360.99 C444.26
+								 360.99 411.04 394.2 411.04 435.71 C411.04 446.78 413.54 457.85 417.69 467.08 L208.43 468 C213.41
+								 457.85 216.73 445.86 216.73 433.87 C216.73 392.35 183.52 359.14 142.83 359.14 C102.14 359.14 68.92
+								 392.35 68.92 433.87 C68.92 445.86 72.24 457.85 77.23 468 C3.32 468 0 418.18 21.59 343.46 ZM172.72
+								 277.96 C148.64 301.02 153.62 318.55 189.33 329.62 C260.74 345.3 334.65 325.93 406.06 313.94 C347.93
+								 253.05 244.14 257.66 172.72 277.96 Z" class="st1"/>
+				</g>
+				<g id="shape4-5" v:mID="4" v:groupContext="shape" transform="translate(81.3786,-3.97904E-13)">
+					<title>Tabelle.4</title>
+					<path d="M61.45 337.92 C94.66 337.92 122.07 366.52 122.07 402.5 C122.07 438.48 94.66 468 61.45 468 C27.4 468
+								 0 438.48 0 402.5 C0 366.52 27.4 337.92 61.45 337.92 ZM61.45 372.98 C75.57 372.98 88.02 385.9 88.02
+								 401.58 C88.02 417.26 75.57 430.18 61.45 430.18 C46.5 430.18 34.05 417.26 34.05 401.58 C34.05 385.9
+								 46.5 372.98 61.45 372.98 Z" class="st1"/>
+				</g>
+				<g id="shape5-7" v:mID="5" v:groupContext="shape" transform="translate(424.331,-3.97904E-13)">
+					<title>Tabelle.5</title>
+					<path d="M60.62 337.92 C94.66 337.92 122.07 366.52 122.07 402.5 C122.07 438.48 94.66 468 60.62 468 C27.4 468
+								 0 438.48 0 402.5 C0 366.52 27.4 337.92 60.62 337.92 ZM60.62 372.98 C75.57 372.98 87.19 385.9 87.19
+								 401.58 C87.19 417.26 75.57 430.18 60.62 430.18 C45.67 430.18 34.05 417.26 34.05 401.58 C34.05 385.9
+								 45.67 372.98 60.62 372.98 Z" class="st1"/>
+				</g>
+			</g>
+		</g>
+		<g id="shape6-9" v:mID="6" v:groupContext="shape" transform="translate(9,-18)">
+			<title>Rechtwinkliges Dreieck</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<path d="M0 468 L594 468 L594 207 L0 468 Z" class="st2"/>
+		</g>
+	</g>
+</svg>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generiert durch Microsoft Visio, SVG Export tabled consuption.svg Zeichenblatt-1 -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events"
+		xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" width="1.52149in" height="1.34528in"
+		viewBox="0 0 109.547 96.8602" xml:space="preserve" color-interpolation-filters="sRGB" class="st3">
+	<v:documentProperties v:langID="1031"/>
+
+	<style type="text/css">
+	<![CDATA[
+		.st1 {fill:#000000;stroke:none;stroke-linecap:butt;stroke-width:38.2501}
+		.st2 {fill:#000000;stroke:none;stroke-linecap:butt;stroke-width:0.5175}
+		.st3 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<g v:mID="0" v:index="1" v:groupContext="foregroundPage">
+		<title>Zeichenblatt-1</title>
+		<v:pageProperties v:drawingScale="1" v:pageScale="1" v:drawingUnits="19" v:shadowOffsetX="9.00003"
+				v:shadowOffsetY="-9.00003"/>
+		<g id="shape1-1" v:mID="1" v:groupContext="shape" transform="translate(62.9281,-63)">
+			<title>Tabelle.6</title>
+			<path d="M37.67 71.87 L2.9 71.87 C1.3 71.87 0 72.8 0 73.95 L0 94.77 C0 95.93 1.3 96.86 2.9 96.86 L37.67 96.86 C39.27
+						 96.86 40.57 95.93 40.57 94.77 L40.57 73.95 C40.57 72.8 39.27 71.87 37.67 71.87 ZM26.09 78.11 L26.09 82.28
+						 L14.49 82.28 L14.49 78.11 L26.09 78.11 ZM26.09 84.36 L26.09 88.54 L14.49 88.54 L14.49 84.36 L26.09 84.36
+						 ZM2.9 78.11 L11.59 78.11 L11.59 82.28 L2.9 82.28 L2.9 78.11 ZM2.9 84.36 L11.59 84.36 L11.59 88.54 L2.9 88.54
+						 L2.9 84.36 ZM2.9 94.77 L2.9 90.61 L11.59 90.61 L11.59 94.77 L2.9 94.77 ZM14.49 94.77 L14.49 90.61 L26.09
+						 90.61 L26.09 94.77 L14.49 94.77 ZM37.67 94.77 L28.98 94.77 L28.98 90.61 L37.67 90.61 L37.67 94.77 ZM37.67
+						 88.54 L28.98 88.54 L28.98 84.36 L37.67 84.36 L37.67 88.54 ZM37.67 82.28 L28.98 82.28 L28.98 78.11 L37.67
+						 78.11 L37.67 82.28 Z" class="st1"/>
+		</g>
+		<g id="group2-3" transform="translate(4.5,-4.3125)" v:mID="2" v:groupContext="group">
+			<title>Tabelle.2</title>
+			<g id="group3-4" v:mID="3" v:groupContext="group">
+				<title>Tabelle.3</title>
+				<g id="shape4-5" v:mID="4" v:groupContext="shape" transform="translate(96.75,137.283) rotate(180)">
+					<title>Tabelle.4</title>
+					<path d="M86.56 41.21 C86.05 40.71 85.37 40.42 84.66 40.42 L28.22 40.42 C27.58 40.42 26.96 40.65 26.47 41.07
+								 L17.06 49.13 C16.47 49.64 16.13 50.39 16.13 51.17 L16.13 61.92 L2.69 61.92 C1.2 61.92 0 63.13 0
+								 64.61 L0 72.67 C0 74.16 1.2 75.36 2.69 75.36 L16.13 75.36 L16.13 86.11 C16.13 86.89 16.47 87.64
+								 17.06 88.15 L26.47 96.21 C26.96 96.63 27.58 96.86 28.22 96.86 L84.66 96.86 C85.37 96.86 86.05 96.58
+								 86.56 96.07 L95.96 86.67 C96.47 86.16 96.75 85.48 96.75 84.77 L96.75 52.52 C96.75 51.8 96.47 51.12
+								 95.96 50.62 L86.56 41.21 ZM63.16 61.92 L63.16 67.3 L30.91 67.3 L30.91 61.92 L63.16 61.92 ZM30.91
+								 59.24 L30.91 55.2 L63.16 55.2 L63.16 59.24 L30.91 59.24 ZM63.16 69.99 L63.16 76.7 L30.91 76.7 L30.91
+								 69.99 L63.16 69.99 ZM63.16 79.39 L63.16 82.08 L30.91 82.08 L30.91 79.39 L63.16 79.39 ZM63.16 52.52
+								 L30.91 52.52 L30.91 49.83 L63.16 49.83 L63.16 52.52 ZM30.91 84.77 L63.16 84.77 L63.16 87.45 L30.91
+								 87.45 L30.91 84.77 ZM63.16 47.14 L30.91 47.14 L30.91 45.8 L63.16 45.8 L63.16 47.14 ZM30.91 90.14
+								 L63.16 90.14 L63.16 91.49 L30.91 91.49 L30.91 90.14 ZM65.84 45.8 L81.97 45.8 L81.97 91.49 L65.84
+								 91.49 L65.84 45.8 ZM5.37 69.99 L5.37 67.3 L18.81 67.3 L18.81 69.99 L5.38 69.99 ZM21.5 84.87 L21.5
+								 72.67 L21.5 64.62 C21.5 64.61 21.5 64.61 21.5 64.61 L21.5 52.41 L28.22 46.65 L28.22 90.63 L21.5
+								 84.87 ZM91.37 83.65 L84.66 90.37 L84.66 46.91 L91.37 53.63 L91.37 83.65 Z" class="st2"/>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>

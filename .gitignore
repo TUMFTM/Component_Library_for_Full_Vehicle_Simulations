@@ -1,0 +1,4 @@
+# ignore all autosave files
+*.autosave
+*.asv
+*.original
