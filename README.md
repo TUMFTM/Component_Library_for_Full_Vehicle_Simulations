@@ -21,7 +21,7 @@ After the repository is downloaded at  [FTM-Repository](www.github.com/TUMFTM/Co
   
 
   
-## Running the Model/Code
+### Running the Model/Code
 
 To run the code Matlab must be started. Browse to the folder where the repository was unpaced and add the folder to the Matlab Path. By running the script "Start\_FullVehicle\_Simulation\_SmartFortwo.m" the simulation starts. to run the script type following command in the command line
   
@@ -49,7 +49,7 @@ The Authors want to thank research associates of the Institute of Automotive Eng
 ## License
 This project is licensed under the LGPL License - see the LICENSE.md file for details
 
-##Sources
+## Sources
 
 [[1]](https://www.researchgate.net/profile/Benedikt_Danquah) Benedikt Danquah, Alexander Koch, Tony Weiß, Markus Lienkamp, Modular, Open Source Simulation Approach: Application to Design and Analyze Electric Vehicles, in fourteenth International Conference on Ecological Vehicles and Renewable Energies, Monaco, 2019.
   
