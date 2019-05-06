@@ -1,4 +1,4 @@
-# Vehicle Component Library
+﻿# Vehicle Component Library
   
 This repository includes a component library for total vehicle simulations. It is developed at the Institute of Automotve Engineering and contains all relevant components for longitudinal full vehicle simulations. The repoisitory includes one longitudinal simulation model, which is parameterized with a parameter set of a real prototype vehicle and simulated with four different driving cycles. The scematic structure of the model is shown below.
 
