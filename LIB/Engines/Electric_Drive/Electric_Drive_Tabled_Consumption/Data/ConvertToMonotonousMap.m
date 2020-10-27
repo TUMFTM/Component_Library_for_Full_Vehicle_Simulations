@@ -1,8 +1,9 @@
-function [MonotonousMap,OM_MotVector, M_MotVector]=ConvertToMonotonousMap(OM_M_Pel_Map,OM_MotVector,M_MotVector,M_Full_Load,OM_Full_Load,M_Min_Load,OM_Min_Load,SupportPoints)
+function [MonotonousMap]=ConvertToMonotonousMap(OM_M_Pel_Map,M_MotVector)
 % Designed by: Benedikt Danquah (FTM, Technical University of Munich)
 % Created on: 01/2019, Version: Matlab2018b
 % ------------------------------------------------------------------------
-% Description: Converts electric power map to a strictly monotonous map.
+% Description: Converts electric power map to a strictly monotonous map in 
+% torque (second dim) direction when speed is constant.
 % ------------------------------------------------------------------------
 % Input:    - OM_M_Pel_Map: electric power map
 %           - M_MotVector: torque vector
@@ -19,32 +20,65 @@ function [MonotonousMap,OM_MotVector, M_MotVector]=ConvertToMonotonousMap(OM_M_P
 % References:   - [1]L. Horlbeck, "Auslegung elektrischer Maschinen für automobile Antriebsstränge unter Berücksichtigung
 %                    des Überlastpotentials", Technische Universität München, München, 2018
 % ------------------------------------------------------------------------
-if size(M_Full_Load,1)>1
-    OM_Full_Load=OM_Full_Load';
+
+
+PelMap=OM_M_Pel_Map;
+ZeroPos=find(M_MotVector==(min(abs(M_MotVector))));
+MinPos=find(M_MotVector==min(M_MotVector));
+MaxPos=find(M_MotVector==max(M_MotVector));
+MotPartTPositions=ZeroPos:MaxPos;
+GenPartTPositions=flip(MinPos:ZeroPos-1);
+
+for iSpeed=1:size(PelMap,1)
+    
+    MotPart=convert_to_monotonous_growing_vector(PelMap(iSpeed,MotPartTPositions));
+    PelMap(iSpeed,MotPartTPositions)=MotPart;
+        
+    GenPart=convert_to_monotonous_falling_vector(PelMap(iSpeed,GenPartTPositions));
+    PelMap(iSpeed,GenPartTPositions)=GenPart;
+    
 end
-if size(OM_Full_Load,1)>1
-    M_Full_Load=M_Full_Load';
-end
-if size(M_Min_Load,1)>1
-    M_Min_Load=M_Min_Load';
-end
-if size(OM_Min_Load,1)>1
-    OM_Min_Load=OM_Min_Load';
+MonotonousMap=PelMap;
 end
 
-M_Full_Load_needed=interp1(OM_Full_Load,M_Full_Load,OM_MotVector);
-M_Full_Load_needed=fillmissing(M_Full_Load_needed,'nearest');
-M_Min_Load_needed=interp1(OM_Min_Load,M_Min_Load,OM_MotVector);
-M_Min_Load_needed=fillmissing(M_Min_Load_needed,'nearest');
 
-Motorgrid=griddedInterpolant({OM_MotVector',M_MotVector},OM_M_Pel_Map);
-MonotonousMap=zeros(size(OM_M_Pel_Map));
-for OMs=1:1:size(OM_MotVector-1,2)
-   
-%     values=(M_Min_Load_needed(OMs):M_Full_Load_needed(OMs):M_Min_Load_needed(OMs))
-    Motorvalue_max=Motorgrid(OM_MotVector(OMs),M_Full_Load_needed(OMs));
-    Motorvalue_min=Motorgrid(OM_MotVector(OMs),M_Min_Load_needed(OMs));
-    MonotonousMap(OMs,:)=interp1([M_Full_Load_needed(OMs);M_Min_Load_needed(OMs)],[Motorvalue_max;Motorvalue_min],M_MotVector);
-end
-MonotonousMap=fillmissing(MonotonousMap','nearest')';
-end
+ 
+ function Growing_Vect=convert_to_monotonous_growing_vector(vector)
+     if isempty(vector)==0
+            OldElem=vector(1);
+              for iElem=2:length(vector)
+                    if vector(iElem)>OldElem
+                         OldElem=vector(iElem);
+                    else
+                        vector(iElem)=NaN;
+                    end
+              end
+              if isnan(vector(end))
+                  vector(end)=OldElem+abs(OldElem*0.0000000001);
+              end
+            Growing_Vect=fillmissing(vector,'linear');
+     else
+         Growing_Vect=[];
+     end
+ end
+ 
+ 
+  function Falling_Vect=convert_to_monotonous_falling_vector(vector)
+      if isempty(vector)==0
+        OldElem=vector(1);
+          for iElem=2:length(vector)
+                if vector(iElem)<OldElem
+                     OldElem=vector(iElem);
+                else
+                    vector(iElem)=NaN  ;
+                end
+          end
+          if isnan(vector(end))
+              vector(end)=OldElem-abs(OldElem*0.0000000001);
+          end
+        Falling_Vect=fillmissing(vector,'linear');
+
+      else
+        Falling_Vect=[];
+      end
+  end

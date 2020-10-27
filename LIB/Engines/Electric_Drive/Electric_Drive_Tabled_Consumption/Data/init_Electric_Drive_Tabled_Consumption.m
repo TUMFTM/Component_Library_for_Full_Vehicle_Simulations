@@ -20,14 +20,23 @@ function [OM_PEl_M_Map,OM_MotVector, PEl_MotVector]= init_Electric_Drive_Tabled_
 % ------------------------------------------------------------------------
 % Convert Map to strictly monotonous Map
 
-[MonotonousMap,OM_MotVector, M_MotVector]=ConvertToMonotonousMap(OM_M_Pel_Map,OM_MotVector,M_MotVector,M_Full_Load,OM_Full_Load,M_Min_Load,OM_Min_Load,3);
-%[xq,yq] = meshgrid(OM_Vector, M_Vector);
-%figure
-%surfc(OM_Vector,M_Vector,MonotonousMap')
+[MonotonousMap]=ConvertToMonotonousMap(OM_M_Pel_Map,M_MotVector);
+szOM=size(OM_M_Pel_Map,1);
+szT=size(OM_M_Pel_Map,2);
+OM_MotVectorMesh=OM_MotVector'*ones(1,szT);
+M_MotVectorMesh=ones(szOM,1)*M_MotVector;
 
-[OM_PEl_M_Map,OM_MotVector, PEl_MotVector]=invert3dMap(MonotonousMap,OM_MotVector,M_MotVector);
-%[xq,yq] = meshgrid(OM_Vector, PEl_Vector);
-% figure
-% surfc(OM_MotVector,PEl_MotVector,OM_PEl_M_Map')
+%convert map
+PEl_MotVectorMesh=ones(szOM,1)*(min(min(MonotonousMap)):((max(max(MonotonousMap))-min(min(MonotonousMap)))/(szT-1)):max(max(MonotonousMap)));
+PEl_MotVector=PEl_MotVectorMesh(1,:);
+OM_PEl_M_Map=griddata(OM_MotVectorMesh,MonotonousMap,M_MotVectorMesh,OM_MotVectorMesh,PEl_MotVectorMesh);
+ZeroPos=find(PEl_MotVector==(min(abs(PEl_MotVector))));
+MinPos=find(PEl_MotVector==min(PEl_MotVector));
+MaxPos=find(PEl_MotVector==max(PEl_MotVector));
+MotPartTPositions=ZeroPos:MaxPos;
+GenPartTPositions=flip(MinPos:ZeroPos-1);
+
+OM_PEl_M_Map(:,MotPartTPositions)=fillmissing(OM_PEl_M_Map(:,MotPartTPositions),'nearest','EndValues',max(max(OM_PEl_M_Map(:,MotPartTPositions))));
+OM_PEl_M_Map(:,GenPartTPositions)=fillmissing(OM_PEl_M_Map(:,GenPartTPositions),'nearest','EndValues',min(min(OM_PEl_M_Map(:,GenPartTPositions))));
 end
 

@@ -26,10 +26,13 @@ else
      
     %Delete all Input-Lines
     LineHand=get_param(BCPath,'LineHandles')
+    try
     delete_line(LineHand.Inport)
-
+    catch
+        disp('no lines to delete')
+    end
     %Set the Inputs of the Bus Creator
-    set_param(BCPath,'Inputs','NumberofInputs')
+    set_param(BCPath,'Inputs',num2str(NumberofInputs))
     
     %Checking if Input-Blocks have to be created or deleted
     if NumberofInputs>(InportNum-1)
@@ -63,7 +66,6 @@ else
     delete_block(ToDelete{i})
     end
     end
-    
     for i=1:NumberofInputs
         
         % Adding of a line between Input and Bus Creator

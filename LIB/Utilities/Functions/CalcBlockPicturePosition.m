@@ -9,7 +9,7 @@ function [picturexpos,pictureypos,picturewidth,pictureheight] = CalcBlockPicture
 %           - pictureratio: ratio of input picture
 %           - minoffsetrelx: minmum relative offset from left and right side of block to picture
 %           - minoffsetrely: minmum relative offset from bottom and top side of block to picture
-%           - minoffsetabsleft: inimum absolute offset between left side of block and picture
+%           - minoffsetabsleft: minimum absolute offset between left side of block and picture
 %           - minoffsetabsright: minimum absolute offset between right side of block and picture
 % ------------------------------------------------------------------------
 % Output:    - picturexpos: Picture x position in Simulink Block
